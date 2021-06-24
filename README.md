@@ -20,7 +20,7 @@ To see the list of all images write:
 
 Then to create an container from the new image run `docker container run -d --name container-name -p 8000:8080 \username/reponame:tag-name`, instead of `-d` use `-it` and at the end spec the bash with `alpine sh` if you need to interact with the terminal. If you have already runned your container once there is no need to spec the `-p port:application-port path`, instead just run `docker container run -it --name container-name apline sh`. If we use `CTR + P + Q` we get out of the terminal and keep the container running, however if we write just `exit` in the terminal it will stop the app, kill the container and get us back to our main terminal. 
 
-To see you up and running containers write `docker container ls` and use the `-a` tag to list containers that are stoped as well.
+To see your up and running containers write `docker container ls` and use the `-a` tag to list containers that are stoped as well.
 
 In order for you to publich your image as a repository and be able to access it from any other PC or to have a backup run the following command:
 `docker image push username/reponame:tag-name`
