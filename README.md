@@ -9,6 +9,9 @@ The first thing to do is to install [Docker Desktop](https://www.docker.com/prod
 You might want to push your details to your docker hub repo therefor you need first to login. After the command write your credentials, such as username and password:
 `docker login`
 
+If for some reason you ever want to logout of your account use:
+`docker logout`
+
 In order to create an image, that will be used later to create a container - from a project run the following command:
 `docker image build -t username/reponame:tag-name .`
 
