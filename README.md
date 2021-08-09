@@ -59,3 +59,8 @@ To see what is running do `docker stack ls`, to see the services `docker stack s
 Recomended way to adjust replicas is to edit the `docker-compose.yml` file. Running then the old command for deployment will update it: `docker stack deploy -c docker-compose.yml the-name-of-the-app`.
 
 To remove everything just do `docker stack rm counter`.
+
+
+## Docker Volumes
+
+In order to create a Docker Volume we simply run `docker run -it -p 8080:5000 -v ${PWD}:/app -w "/app" mcr.microsoft.com/dotnet/sdk:5.0`. If we are done with that we can do `docker ps -a` to list all running containers / volumes and then `docker rm 5b` we just put `-v` if we want to remove the source folder - however since we linked the source folder customly this won't delete it.
